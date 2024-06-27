@@ -1,3 +1,12 @@
+package controle;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import dao.Dao;
+import modelo.Modelo;
+import visao.JanelaPrincipal;
+
 public class Controle implements ActionListener{
 	
 	private JanelaPrincipal jan;
