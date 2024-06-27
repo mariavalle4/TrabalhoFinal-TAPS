@@ -10,20 +10,20 @@ import visao.JanelaPrincipal;
 public class Controle implements ActionListener{
 	
 	private JanelaPrincipal jan;
-	private Modelo m;
+	private Modelo model;
 	private Dao dao;
 	
-	public Controle(JanelaPrincipal jan, Modelo m) {
+	public Controle(JanelaPrincipal jan, Modelo model) {
 		this.jan = jan;
-		this.m = m;
+		this.model = model;
 		dao = new Dao();
 		registraListeneracao();
 	}
 
 	private void registraListeneracao() {
-		jan.getButtonCadastrar1().addActionListener(this);
+		jan.getButtonConsultar().addActionListener(this);
 		jan.getButtonLimpar().addActionListener(this);
-		jan.getButtonLimpar1().addActionListener(this);
+		jan.getButtonLimparConsulta().addActionListener(this);
 		jan.getButtonCadastrar().addActionListener(this);
 		
 	}
@@ -43,9 +43,9 @@ public class Controle implements ActionListener{
 			String nome = jan.getTextFieldNome().getText();
 			String endereco = jan.getTextFieldEndereco().getText();
 			
-			m.setCPF(CPF);
-			m.setNome(nome);
-			m.setEndereco(endereco);
+			model.setCPF(CPF);
+			model.setNome(nome);
+			model.setEndereco(endereco);
 			
 			if(dao.cadastraPaciente(m))
 			{
@@ -61,7 +61,7 @@ public class Controle implements ActionListener{
 		else if(e.getActionCommand().equals("Consultar"))
 		{
 			String CPF = jan.getTextFieldCPF1().getText();
-			m.setCPF(CPF);
+			model.setCPF(CPF);
 			
 			if(dao.consultaPaciente(m))
 			{
