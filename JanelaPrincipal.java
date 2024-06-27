@@ -35,8 +35,8 @@ public class JanelaPrincipal extends JFrame implements ActionListener{
 	private JTextField textFieldEndereco1;
 	private JButton buttonCadastrar;
 	private JButton buttonLimpar;
-	private JButton buttonCadastrar1;
-	private JButton buttonLimpar1;
+	private JButton buttonConsultar;
+	private JButton buttonLimparConsulta;
 
 	/**
 	 * Launch the application.
@@ -182,14 +182,14 @@ public class JanelaPrincipal extends JFrame implements ActionListener{
 		panelConsultar.add(textFieldEndereco1);
 		textFieldEndereco1.setColumns(10);
 		
-		buttonCadastrar1 = new JButton("Consultar");
-		buttonCadastrar1.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		buttonCadastrar1.setBounds(10, 200, 86, 21);
+		buttonConsultar = new JButton("Consultar");
+		buttonConsultar.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		buttonConsultar.setBounds(10, 200, 86, 21);
 		panelConsultar.add(buttonCadastrar1);
 		
-		buttonLimpar1 = new JButton("Limpar");
-		buttonLimpar1.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		buttonLimpar1.setBounds(106, 200, 79, 21);
+		buttonLimparConsulta = new JButton("Limpar");
+		buttonLimparConsulta.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		buttonLimparConsulta.setBounds(106, 200, 79, 21);
 		panelConsultar.add(buttonLimpar1);
 	}
 	
@@ -257,20 +257,20 @@ public class JanelaPrincipal extends JFrame implements ActionListener{
 		this.buttonLimpar = buttonLimpar;
 	}
 
-	public JButton getButtonCadastrar1() {
-		return buttonCadastrar1;
+	public JButton getButtonConsultar() {
+		return buttonConsultar;
 	}
 
-	public void setButtonCadastrar1(JButton buttonCadastrar1) {
-		this.buttonCadastrar1 = buttonCadastrar1;
+	public void setButtonConsultar(JButton buttonConsultar) {
+		this.buttonConsultar = buttonConsultar;
 	}
 
-	public JButton getButtonLimpar1() {
-		return buttonLimpar1;
+	public JButton getButtonLimparConsulta() {
+		return buttonLimparConsulta;
 	}
 
-	public void setButtonLimpar1(JButton buttonLimpar1) {
-		this.buttonLimpar1 = buttonLimpar1;
+	public void setButtonLimparConsulta(JButton buttonConsulta) {
+		this.buttonLimparConsulta = buttonConsulta;
 	}
 	public void limpatelaCadastrar()
 	{
